@@ -499,7 +499,7 @@
 
 ### Mobile APP
 
-![Main page](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/Main page2.png)
+![Main page](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/Main%20page2.png)
 
 ![Sign Up Page](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/Sign%20Up%20Page1.png)
 
@@ -565,7 +565,7 @@
 
 ![AM - Rep map](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/AM%20-%20Rep%20map.png)
 
-![AM - Data Preview](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/AM - Data Preview.png)
+![AM - Data Preview](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/AM%20-%20Data%20Preview%20)
 
 ### Mobile APP - Flows
 
