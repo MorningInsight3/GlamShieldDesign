@@ -113,7 +113,8 @@
 - bgName: String
 - bgNameEn: String
 - bgNameLatin: String
-- bgDemageLevel: (FK: DemageLevel)
+- bgDamageLevel: (FK: DamageLevel)
+- //critical limits = pest limit parameters for various conditions. Ex: certain number of specific pest found during a specific period of time is considered a critical event//
 - uid: UUID (FK: users)
 
 ### 3.10 Pest Control Suggestions (PestControl)
@@ -273,10 +274,10 @@
 
 ### 6.1 Organization Registration
 
-- Register organization when user selects organization during registration
+- Register organization when user selects organization during registration //I don't really get this one. Do you mean the new user can pick their org? when register? if so, when the org. is it recorded in the first place? if the new user can enter their org. during their registration, how do they know if the org. has or hasn't been registered//
 - Allow users to set up hierarchical management of organizations (tree display)
-- First-time registration administrator defaults to current registrant
-- Organization registration allows administrator to change all information
+- First-time registration administrator defaults to current registrant //can this be changed later? Administrator might not be the first one who registered//
+- Organization registration allows administrator to change all information //what 's different between Organization registration and administrator?//
 - Summary and detailed query of historical inspection/pest records for each organization
 
 
@@ -296,48 +297,48 @@
 - Specific permissions can be modified arbitrarily, and can also be modified individually after inheriting from a group
 - Users can be activated and deactivated, but not deleted
 
-### 6.4 Trap Management:
+### 6.4 Trap Management: //we should reserve the ability to include and retrieve the data from camera traps//
 
 - Users can manually enter or scan QR code for new trap registration
-- Can register trap location directly during registration or supplement later
+- Can register trap location directly during registration or supplement later //how to register trap location directly during registration without trap QRcode?//
 - Can scan trap QR code to query/modify trap information at any time
 - Location identification method is pixel position on map image (simultaneously record percentage position from leftmost and topmost)
 - User clicks on map image position to automatically obtain location, stored in JSON
 - Summary and detailed query of historical pest records for each trap
 
-### 6.5 Map Module Management:
+### 6.5 Map Module Management: //floor maps should store locally. the user do not wish to upload their floor maps to the public due to privacy concern//
 
 - ~~Use MapKit (iOS) and Google Maps SDK (Android)~~
-- Users can upload images within specified size and resolution range
-- Uploaded images can be logically deleted, not allowed to modify
-- Record image length, width, size, and resolution
-- Support image zoom and pan
+- Users can upload floor maps within specified size and resolution range
+- Uploaded floor maps can be logically deleted, not allowed to modify //what do you mean this?//
+- Record floor maps length, width, size, and resolution
+- Support floor maps zoom and pan
 - For map images with traps, mark valid trap locations with green dots; for traps about to expire (within one month), mark with red
 
 ### 6.6 Pest Management:
 
-- Can register newly discovered pests individually
+- Can register newly discovered pests individually //we should also have pest data available for users// 
 - Pests need tree-structured hierarchical management
 - Can enter prevention and elimination measures for pests at the time of registration
-- Registrant can modify pest-related information, can only logically delete
+- Registrant can modify pest-related information, can only logically delete //"locally"?//
 
 ### 6.7 Inspection Management
 
 - Can set inspection tasks for designated employees
 - Designated employees will receive reminders, one day before work and 15 minutes before
 - Inspection employees can select designated inspection area map for trap-by-trap inspection, scanning QR codes and taking photos
-- Each trap inspection needs to indicate if there are any abnormalities, if abnormal, need to fill in abnormal content
-- Can inspect according to map, each completed inspection marked with a green checkmark on the original marker, abnormal ones marked with a red X
+- Each trap inspection needs to indicate if there are any abnormalities, if abnormal, need to fill in abnormal content //for manual trap inspection, the user should be able to take a photo of the trap each time they visit the trap so they can compare the change between the photo taken on the last visit and the actual trap.//
+- Can inspect according to map, each completed inspection marked with a green checkmark on the original marker, abnormal ones marked with a red X //mark on the actual trap or photo?//
 - Uninspected traps should have prompts. Area completion needs confirmation, forced completion possible for areas with uninspected traps but reasons must be provided.
 
 ### 6.8 Pest Discovery and Registration
 
-- Conduct photography first, then registration on the pest discovery page
+- Conduct photography first, then registration on the pest discovery page //max 3 photos//
 - Provide registration description for each photo
 - If a new pest is discovered, can register new pest; if it's an already registered pest, can select the discovered pest
 - For pest damage levels, can provide corresponding level reminders and color indicators based on the level
 - Discoverer or organization administrator can modify new pest discovery information
-- For multiple pests found in the same trap, can take photos and register separately
+- For multiple pests found in the same trap, can take photos and register separately //for the trap inspection, the user should a take photo of entire trap each time when visit the trap. it would be great if they can mark directly on the photo before recording the finding// 
 
 ### 6.9 Camera Module
 
@@ -497,7 +498,7 @@
 
 
 
-### Mobile APP
+### Mobile APP //will replaced by new version//
 
 ![Main page](https://raw.githubusercontent.com/liangyimingcom/storage/master/PicGo/Main%20page2.png)
 
