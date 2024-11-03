@@ -277,7 +277,7 @@
 - Register organization when user selects organization during registration //I don't really get this one. Do you mean the new user can pick their org? when register? if so, when the org. is it recorded in the first place? if the new user can enter their org. during their registration, how do they know if the org. has or hasn't been registered//
 - Allow users to set up hierarchical management of organizations (tree display)
 - First-time registration administrator defaults to current registrant //can this be changed later? Administrator might not be the first one who registered//
-- Organization registration allows administrator to change all information //what 's different between Organization registration and administrator?//
+- Organization registration allows administrator to change all information 
 - Summary and detailed query of historical inspection/pest records for each organization
 
 
